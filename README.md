@@ -36,6 +36,12 @@ gulp.task('default', function () {
 
 See the css-min [options](https://github.com/GoalSmashers/clean-css).
 
+## Other options
+
+- Show loging
+
+`showLog` : (True, false) to trun on or off of the log
+
 ## Inspired by
 
 - https://github.com/sindresorhus/gulp-imagemin
