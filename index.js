@@ -40,7 +40,9 @@ module.exports = function (options) {
 						return cb(new gutil.PluginError('gulp-cssmin', err));
 					}
 					var minimized = new CleanCSS(options).minify(data);
-					gutil.log('gulp-cssmin:', gutil.colors.green('✔ ') + file.relative); 
+					if (options.showLog) {
+						gutil.log('gulp-cssmin:', gutil.colors.green('✔ ') + file.relative);
+					}
 					file.contents = new Buffer(minimized);
 					cb(null, file);
 				});
